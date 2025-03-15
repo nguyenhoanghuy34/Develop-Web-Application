@@ -1,0 +1,38 @@
+/* Màn hình PC (>= 1024px) */
+@media (min-width: 1024px) {
+  .sidebar-container {
+    order: 1; /* Sidebar ở bên trái */
+    width: 25%;
+  }
+
+  .content-container {
+    order: 2; /* Nội dung ở bên phải */
+    width: 75%;
+  }
+}
+
+/* Màn hình Tablet (>= 740px và < 1024px) */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sidebar-container {
+    order: 1; /* Sidebar lên trên */
+    width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+  }
+
+  .content-container {
+    order: 2; /* Nội dung xuống dưới Sidebar */
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+  }
+}
+
+/* Màn hình Mobile (< 740px) */
+@media (max-width: 739px) {
+  .sidebar-container {
+    order: 1; /* Sidebar lên trên */
+    width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+  }
+
+  .content-container {
+    order: 2; /* Nội dung xuống dưới Sidebar */
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+  }
+}

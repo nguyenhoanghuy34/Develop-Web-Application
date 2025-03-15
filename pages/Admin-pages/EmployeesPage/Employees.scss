@@ -1,0 +1,130 @@
+/* Định dạng cho tiêu đề và bảng */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Định dạng bảng */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  background-color: #f8f9fa;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Định dạng cho tiêu đề của bảng */
+.table th {
+  background-color: #343a40;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Định dạng các hàng bảng */
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Định dạng cho Sidebar */
+.sidebar-animation {
+  padding: 20px;
+  background-color: #e9ecef;
+}
+
+.col-content {
+  padding: 20px;
+}
+
+.table td {
+  color: #555;
+}
+
+/* Hiệu ứng hover cho các hàng bảng */
+.table tr:hover {
+  background-color: #dcdcdc;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Màn hình PC lớn (>= 1208px) */
+@media (min-width: 1208px) {
+  .sidebar-animation {
+    width: 25%; /* Sidebar chiếm 1/4 chiều rộng */
+    order: 0; /* Sidebar nằm bên trái */
+    position: relative; /* Đảm bảo sidebar ở bên trái */
+  }
+  .col-content {
+    width: 75%; /* Nội dung chiếm 3/4 chiều rộng */
+    order: 1; /* Nội dung nằm bên phải */
+  }
+}
+
+/* Màn hình nhỏ hơn 1208px */
+@media (max-width: 1207px) {
+  .sidebar-animation {
+    width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+    order: 0; /* Sidebar nằm trên */
+    position: relative; /* Đảm bảo sidebar ở trên */
+  }
+  .col-content {
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+    order: 1;
+  }
+}
+
+/* Màn hình Tablet và PC nhỏ (>= 1024px và < 1208px) */
+@media (min-width: 1024px) and (max-width: 1207px) {
+  .sidebar-animation {
+    width: 25%; /* Sidebar chiếm 1/4 chiều rộng */
+    order: 0; /* Sidebar nằm bên trái */
+  }
+  .col-content {
+    width: 75%; /* Nội dung chiếm 3/4 chiều rộng */
+    order: 1;
+  }
+}
+
+/* Màn hình Tablet (>= 740px và < 1024px) */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sidebar-animation {
+    width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+    order: 0; /* Sidebar nằm trên */
+  }
+  .col-content {
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+    order: 1;
+  }
+}
+
+/* Màn hình Mobile (< 740px) */
+@media (max-width: 739px) {
+  .sidebar-animation {
+    width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+    order: 0; /* Sidebar nằm trên */
+  }
+  .col-content {
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+    order: 1;
+  }
+}
+
+/* Màn hình dưới 796px - Thêm thanh cuộn ngang cho bảng */
+@media (max-width: 795px) {
+  .table-responsive {
+    overflow-x: auto; /* Hiển thị thanh cuộn ngang khi bảng rộng hơn container */
+  }
+
+  /* Đảm bảo bảng có chiều rộng cố định để thanh cuộn ngang hoạt động */
+  .table {
+    min-width: 1000px; /* Đảm bảo bảng có đủ chiều rộng để cần thanh cuộn ngang */
+  }
+}

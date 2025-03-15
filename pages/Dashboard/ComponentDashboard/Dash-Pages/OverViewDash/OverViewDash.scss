@@ -1,0 +1,60 @@
+/* Ensure flexbox layout for Rows and child columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles for PC (>= 1024px) */
+@media (min-width: 1024px) {
+  .sidebar-container {
+    width: 25%; /* Sidebar occupies 1/4 of the width */
+  }
+
+  .content-container {
+    width: 75%; /* Content occupies 3/4 of the width */
+  }
+
+  .card-stats,
+  .chart-container {
+    width: 100%;
+  }
+}
+
+/* Styles for Tablet (>= 740px and < 1024px) */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sidebar-container,
+  .content-container {
+    width: 100%; /* Sidebar and Content occupy full width */
+  }
+
+  .sidebar-container {
+    order: 1; /* Place Sidebar on top */
+  }
+
+  .card-stats,
+  .chart-container {
+    width: 100%;
+  }
+}
+
+/* Styles for Mobile (< 740px) */
+@media (max-width: 739px) {
+  .sidebar-container,
+  .content-container {
+    width: 100%; /* Full width for Sidebar and Content */
+  }
+
+  .sidebar-container {
+    order: 1; /* Place Sidebar on top */
+  }
+
+  .card-stats {
+    width: 100%;
+    margin-bottom: 10px; /* Reduce margin below each card */
+  }
+
+  .chart-container {
+    width: 100%;
+    margin-bottom: 10px; /* Reduce margin below each chart */
+  }
+}

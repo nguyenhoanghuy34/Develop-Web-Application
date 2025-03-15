@@ -1,0 +1,53 @@
+.top-staff {
+  .scrollable-table-container {
+    overflow-x: auto; /* Cho phép cuộn ngang khi bảng quá rộng */
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+  }
+
+  /* Đảm bảo bảng có thể cuộn ngang */
+  .table-container table {
+    width: 100%;
+    min-width: 600px; /* Đảm bảo bảng không bị co quá mức */
+    table-layout: auto; /* Đảm bảo bảng không cố định kích thước */
+  }
+
+  .table-container th,
+  .table-container td {
+    text-align: left;
+    padding: 8px; /* Điều chỉnh padding cho ô */
+  }
+
+  .table-container th {
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .table-container td {
+    padding: 8px;
+  }
+
+  /* Điều chỉnh cột đầu tiên nếu cần */
+  .table-container th:first-child,
+  .table-container td:first-child {
+    width: 200px;
+  }
+
+  /* Media query cho màn hình nhỏ hơn 794px */
+  @media (max-width: 794px) {
+    .scrollable-table-container {
+      overflow-x: auto; /* Thêm thanh cuộn ngang khi màn hình nhỏ */
+    }
+
+    .table-container table {
+      width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+      min-width: 600px; /* Đảm bảo bảng không bị co lại quá mức */
+    }
+
+    .table-container th,
+    .table-container td {
+      font-size: 14px; /* Giảm kích thước chữ nếu cần */
+    }
+  }
+}

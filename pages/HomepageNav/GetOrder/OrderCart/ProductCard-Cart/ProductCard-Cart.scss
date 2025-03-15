@@ -1,0 +1,53 @@
+/* ProductCard-Cart.scss */
+.product-card-cart {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+  }
+
+  &__row {
+    margin-bottom: 0.5rem;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem; /* Thêm khoảng cách dưới tên sản phẩm */
+  }
+
+  &__quantity,
+  &__total {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.3rem; /* Thêm khoảng cách giữa các dòng thông tin */
+  }
+
+  &__image {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #007bff; /* Viền cho hình ảnh */
+    margin-bottom: 1rem; /* Khoảng cách dưới ảnh */
+  }
+
+  &__total {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.1rem;
+  }
+}

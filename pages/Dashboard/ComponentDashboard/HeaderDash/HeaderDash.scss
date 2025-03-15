@@ -1,0 +1,103 @@
+.header-container {
+  padding: 10px;
+}
+
+/* Phần header text gồm logo và dashboard */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif; /* Font chữ đẹp cho logo */
+  font-size: 28px; /* Kích thước chữ lớn hơn cho logo */
+  font-weight: 600;
+  margin: 0;
+  color: #fff; /* Màu chữ trắng để nổi bật */
+}
+
+.dashboard-text {
+  font-family: "Lato", sans-serif; /* Font chữ đẹp cho Dashboard */
+  font-size: 20px; /* Kích thước chữ cho Dashboard */
+  font-weight: 400;
+  margin: 0;
+  color: #fff; /* Màu chữ trắng */
+}
+
+/* Profile ảnh dạng tròn */
+.profile-image {
+  width: 60px; /* Kích thước ảnh nhỏ hơn */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%; /* Tạo ảnh tròn */
+  border: 2px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .header-text {
+    display: none;
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info {
+  margin-left: 10px;
+}
+
+.profile-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile-role {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 0;
+}
+.profile-content {
+  display: flex;
+  flex-direction: column; /* Đặt chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa chữ */
+  margin-right: 20px; /* Để hình ảnh không sát mép phải */
+}
+
+.profile-image {
+  width: 60px; /* Kích thước ảnh */
+  height: 60px;
+  object-fit: cover; /* Giữ tỷ lệ khung hình */
+  border-radius: 50%; /* Tạo ảnh tròn */
+  border: 2px solid #ddd;
+}
+
+.profile-name,
+.profile-role {
+  margin: 5px 0; /* Khoảng cách giữa các phần chữ */
+  color: #fff; /* Màu chữ */
+}
+// styles.scss (hoặc file CSS mà bạn đang sử dụng cho HeaderDash)
+.header-fixed {
+  position: fixed; // Cố định vị trí
+  top: 0; // Ở đầu trang
+  left: 0; // Căn trái
+  width: 100%; // Chiếm toàn bộ chiều rộng
+  z-index: 1000; // Đảm bảo nằm trên các phần tử khác
+  background-color: #ffffff; // Màu nền
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}

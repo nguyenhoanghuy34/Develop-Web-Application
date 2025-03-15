@@ -1,0 +1,21 @@
+.review-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__comment {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  &__rating {
+    color: #ffcc00; // Màu vàng cho sao
+  }
+}

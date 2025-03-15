@@ -1,0 +1,57 @@
+.homepage-nav-container {
+  padding: 10px;
+}
+
+.sidebar-container,
+.content-container {
+  padding: 2px;
+}
+
+/* Responsive cho PC: >= 1024px */
+@media (min-width: 1024px) {
+  .sidebar-container,
+  .content-container {
+    padding: 10px;
+  }
+}
+
+/* Responsive cho Tablet: >= 740px và < 1024px */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sidebar-container {
+    padding: 8px;
+  }
+
+  .content-container {
+    padding: 8px;
+  }
+}
+
+/* Responsive cho Tablet nhỏ hơn 860px hoặc Mobile: < 860px */
+@media (max-width: 859px) {
+  .sidebar-container {
+    order: 1; /* Sidebar lên trên */
+    width: 100%; /* Sidebar chiếm hết chiều rộng */
+    padding: 5px;
+  }
+
+  .content-container {
+    order: 2; /* Nội dung bên dưới */
+    width: 100%; /* Nội dung chiếm hết chiều rộng */
+    padding: 5px;
+  }
+}
+
+/* Responsive cho Mobile: < 740px */
+@media (max-width: 739px) {
+  .sidebar-container {
+    order: 1; /* Sidebar lên trên */
+    width: 100%; /* Sidebar chiếm hết chiều rộng */
+    padding: 5px;
+  }
+
+  .content-container {
+    order: 2; /* Nội dung bên dưới */
+    width: 100%; /* Nội dung chiếm hết chiều rộng */
+    padding: 5px;
+  }
+}

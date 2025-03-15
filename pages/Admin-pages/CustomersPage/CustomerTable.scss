@@ -1,0 +1,58 @@
+/* Đảm bảo bảng chiếm toàn bộ chiều rộng của vùng chứa */
+.customer-table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Thêm thanh cuộn ngang khi cần thiết */
+  -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên thiết bị cảm ứng */
+}
+
+/* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+.customer-table {
+  width: 100%;
+  table-layout: fixed; /* Đảm bảo bảng không bị co lại quá nhiều */
+  min-width: 800px; /* Đảm bảo bảng không bị quá hẹp */
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word; /* Cho phép các từ dài xuống dòng */
+  white-space: nowrap; /* Đảm bảo nội dung không bị ngắt dòng */
+}
+
+/* Media query cho các màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .customer-table-wrapper {
+    overflow-x: auto; /* Thêm thanh cuộn ngang cho bảng */
+  }
+
+  .customer-table {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+    min-width: unset; /* Không giới hạn chiều rộng tối thiểu */
+  }
+
+  .customer-table th,
+  .customer-table td {
+    padding: 8px; /* Điều chỉnh khoảng cách các ô cho dễ nhìn */
+    word-wrap: break-word; /* Đảm bảo các ô có thể tự động xuống dòng khi cần */
+  }
+}
+/* Media query cho các màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .customer-table-wrapper {
+    overflow-x: auto; /* Thêm thanh cuộn ngang cho bảng */
+    -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên thiết bị cảm ứng */
+  }
+
+  .customer-table {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+    min-width: unset; /* Không giới hạn chiều rộng tối thiểu */
+  }
+
+  .customer-table th,
+  .customer-table td {
+    padding: 8px; /* Điều chỉnh khoảng cách các ô cho dễ nhìn */
+    word-wrap: break-word; /* Đảm bảo các ô có thể tự động xuống dòng khi cần */
+    white-space: normal; /* Cho phép nội dung xuống dòng khi cần thiết */
+  }
+}

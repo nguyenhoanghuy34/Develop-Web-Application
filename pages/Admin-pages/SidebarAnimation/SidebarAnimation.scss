@@ -1,0 +1,154 @@
+.sidebar-animation-container {
+  height: 100vh; /* Đặt chiều cao của container bằng 100% chiều cao của màn hình */
+  background-color: #f8f9fa; /* Màu nền nhạt cho container */
+  border-radius: 10px; /* Bo tròn các góc của container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho container */
+
+  .icon-container {
+    display: flex; /* Sử dụng Flexbox để canh chỉnh các icon bên trong */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đặt chiều cao của icon-container bằng với chiều cao của parent */
+  }
+
+  .data-icon {
+    width: 100px; /* Đặt chiều rộng của icon là 100px */
+    height: 100px; /* Đặt chiều cao của icon là 100px */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ hết không gian mà không bị biến dạng */
+  }
+
+  .animation-container {
+    display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử bên trong */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    position: relative; /* Đặt vị trí relative để sử dụng với các phần tử tuyệt đối bên trong */
+
+    h5 {
+      margin: 0 10px; /* Đặt margin cho các phần tử h5, cách 10px ở hai bên */
+      font-size: 3rem; /* Đặt kích thước font chữ là 3rem */
+      font-family: "Nosifer", cursive; /* Sử dụng font chữ Nosifer, nếu không có thì dùng font cursive */
+      font-weight: bold; /* Đặt chữ in đậm */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Đổ bóng cho chữ */
+    }
+
+    .store {
+      animation: fallStore 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Áp dụng animation fallStore cho phần tử store */
+    }
+
+    .nutri {
+      visibility: hidden; /* Ẩn phần tử nutri ban đầu */
+      animation: fallNutri 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) 2s forwards; /* Áp dụng animation fallNutri cho phần tử nutri với delay 2s */
+    }
+
+    .crack {
+      position: absolute; /* Đặt phần tử crack ở vị trí tuyệt đối */
+      top: 50%; /* Đặt phần tử crack ở giữa theo chiều dọc */
+      left: 50%; /* Đặt phần tử crack ở giữa theo chiều ngang */
+      transform: translate(
+        -50%,
+        -50%
+      ); /* Căn chỉnh chính xác phần tử vào giữa */
+      z-index: -1; /* Đặt z-index thấp hơn so với các phần tử khác */
+      width: 100%; /* Đặt chiều rộng của crack bằng với chiều rộng của container */
+      height: 100%; /* Đặt chiều cao của crack bằng với chiều cao của container */
+      pointer-events: none; /* Không cho phép các sự kiện chuột tác động đến phần tử này */
+      opacity: 0; /* Ẩn phần tử crack ban đầu */
+      animation: crackEffect 0.5s forwards 3s infinite; /* Áp dụng animation crackEffect cho phần tử crack với delay 3s và lặp lại vô hạn */
+    }
+
+    .crack::before,
+    .crack::after {
+      content: ""; /* Tạo nội dung trống cho các phần tử trước và sau */
+      position: absolute; /* Đặt các phần tử này ở vị trí tuyệt đối */
+      background-color: black; /* Màu nền đen cho các phần tử crack */
+      opacity: 0.8; /* Đặt độ mờ cho các phần tử crack */
+    }
+
+    .crack::before {
+      width: 60%; /* Đặt chiều rộng của phần tử crack::before là 60% */
+      height: 2px; /* Đặt chiều cao của phần tử crack::before là 2px */
+      top: 45%; /* Đặt vị trí theo chiều dọc là 45% */
+      left: 20%; /* Đặt vị trí theo chiều ngang là 20% */
+      transform: rotate(15deg); /* Xoay phần tử crack::before một góc 15 độ */
+    }
+
+    .crack::after {
+      width: 80%; /* Đặt chiều rộng của phần tử crack::after là 80% */
+      height: 2px; /* Đặt chiều cao của phần tử crack::after là 2px */
+      top: 55%; /* Đặt vị trí theo chiều dọc là 55% */
+      left: 10%; /* Đặt vị trí theo chiều ngang là 10% */
+      transform: rotate(-15deg); /* Xoay phần tử crack::after một góc -15 độ */
+    }
+  }
+}
+
+/* Animation for elements */
+@keyframes fallStore {
+  0% {
+    transform: translateY(-50px); /* Bắt đầu từ vị trí cách 50px ở trên */
+    opacity: 0; /* Ban đầu là không nhìn thấy */
+  }
+  50% {
+    transform: translateY(30px); /* Di chuyển xuống 30px */
+    opacity: 0.6; /* Độ mờ là 0.6 */
+  }
+  100% {
+    transform: translateY(0); /* Kết thúc ở vị trí ban đầu */
+    opacity: 1; /* Độ mờ là 1 (hoàn toàn nhìn thấy) */
+  }
+}
+
+@keyframes fallNutri {
+  0% {
+    transform: translateY(-50px); /* Bắt đầu từ vị trí cách 50px ở trên */
+    opacity: 0; /* Ban đầu là không nhìn thấy */
+  }
+  50% {
+    transform: translateY(30px); /* Di chuyển xuống 30px */
+    opacity: 0.6; /* Độ mờ là 0.6 */
+  }
+  100% {
+    transform: translateY(0); /* Kết thúc ở vị trí ban đầu */
+    opacity: 1; /* Độ mờ là 1 (hoàn toàn nhìn thấy) */
+    visibility: visible; /* Hiển thị phần tử nutri */
+  }
+}
+
+@keyframes crackEffect {
+  0% {
+    opacity: 0; /* Ban đầu không nhìn thấy */
+  }
+  100% {
+    opacity: 1; /* Kết thúc với độ mờ hoàn toàn */
+  }
+}
+
+/* Mặc định cho màn hình lớn (PC) */
+@media (max-width: 1208px) {
+  .sidebar-animation-container {
+    height: 100vh; /* Chiều cao đầy đủ */
+    padding: 20px; /* Thêm padding 20px cho container */
+  }
+
+  .animation-container {
+    h5 {
+      font-size: 2.5rem; /* Giảm kích thước chữ cho phù hợp với màn hình nhỏ */
+    }
+  }
+}
+
+/* Màn hình Tablet và nhỏ hơn */
+@media (max-width: 818px) {
+  .sidebar-animation-container {
+    height: auto; /* Sidebar di chuyển lên trên */
+    padding: 20px; /* Thêm padding 20px cho container */
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu cần */
+  }
+
+  .animation-container {
+    h5 {
+      font-size: 2rem; /* Giảm kích thước chữ cho phù hợp với màn hình nhỏ hơn */
+    }
+  }
+}

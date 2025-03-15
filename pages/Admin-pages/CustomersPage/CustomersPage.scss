@@ -1,0 +1,50 @@
+/* Chỉ áp dụng style cho CustomersPage */
+.customers-page {
+  /* Điều chỉnh cho Sidebar và Content */
+  .sidebar-col {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Khoảng cách dưới sidebar */
+  }
+
+  .sidebar-animation {
+    width: 100% !important; /* Sidebar chiếm toàn bộ chiều rộng */
+    order: 0; /* Sidebar nằm trên cùng */
+    position: absolute; /* Sidebar di chuyển lên trên */
+    top: 0; /* Đảm bảo Sidebar đứng ở trên cùng */
+    left: 0; /* Sidebar chiếm toàn bộ chiều ngang */
+    z-index: 1; /* Đảm bảo Sidebar có độ ưu tiên hiển thị cao hơn */
+    background-color: white; /* Đảm bảo sidebar có nền trắng khi nổi bật */
+  }
+
+  .col-content {
+    width: 100%; /* Nội dung chiếm toàn bộ chiều rộng */
+    order: 1; /* Nội dung nằm dưới sidebar */
+    padding-top: 20px; /* Đảm bảo có khoảng cách từ trên */
+  }
+
+  /* Media query cho màn hình nhỏ hơn 1200px */
+  @media (max-width: 1200px) {
+    /* Sidebar ẩn khi không cần thiết */
+    .sidebar-animation {
+      position: fixed; /* Sidebar cố định */
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+      height: 100%; /* Chiếm toàn bộ chiều cao */
+      top: 0;
+      left: 0;
+      background-color: #343a40; /* Màu nền tối cho sidebar */
+      display: block;
+      z-index: 1; /* Đảm bảo sidebar nổi lên trên */
+    }
+
+    .col-content {
+      padding-top: 20px; /* Đảm bảo có khoảng cách từ trên */
+      margin-left: 0; /* Đẩy nội dung sang trái khi sidebar không còn */
+    }
+
+    .customers-page .sidebar-col {
+      /* Giảm bớt chiều rộng của sidebar nếu không cần thiết */
+      display: none; /* Ẩn sidebar trên màn hình nhỏ */
+    }
+  }
+}

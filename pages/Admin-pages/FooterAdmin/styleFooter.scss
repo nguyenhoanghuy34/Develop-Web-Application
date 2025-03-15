@@ -1,0 +1,116 @@
+footer {
+  padding: 10px 0;
+  background-color: #ffffff; /* Nền trắng */
+  color: black; /* Chữ đen */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng phía dưới */
+  border-radius: 0; /* Xóa bo góc */
+  border-top: 2px solid #a29b9b; /* Viền phía trên */
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: rgb(2, 2, 2); /* Màu mặc định */
+  transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.social-icons a:hover {
+  color: #17a2b8; /* Màu text-info của Bootstrap */
+}
+
+/* Đổi màu chữ khi hover vào "CHÍNH SÁCH BẢO MẬT" */
+.policy-link {
+  transition: color 0.3s;
+}
+
+.policy-link:hover {
+  color: red; /* Màu đỏ khi hover */
+}
+
+/* Modal */
+.modal-custom {
+  max-width: 600px; /* Chiều rộng tối đa của modal */
+  width: 90%; /* Đảm bảo modal responsive */
+}
+
+/* Mobile: dưới 740px */
+@media (max-width: 739px) {
+  footer {
+    text-align: center; /* Căn giữa nội dung footer */
+  }
+
+  .social-icons {
+    justify-content: center; /* Căn giữa các biểu tượng xã hội */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Giảm kích thước biểu tượng trên mobile */
+  }
+}
+
+/* Tablet: từ 740px đến dưới 1024px */
+@media (min-width: 740px) and (max-width: 1023px) {
+  footer {
+    text-align: center; /* Căn giữa nội dung footer */
+  }
+
+  .social-icons {
+    justify-content: center; /* Căn giữa các biểu tượng xã hội */
+  }
+
+  .social-icons a {
+    font-size: 22px; /* Kích thước biểu tượng phù hợp cho tablet */
+  }
+}
+
+/* PC: từ 1024px trở lên */
+@media (min-width: 1024px) {
+  footer {
+    text-align: left; /* Căn trái nội dung footer */
+  }
+
+  .social-icons {
+    justify-content: flex-start; /* Để các biểu tượng ở bên trái */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Kích thước biểu tượng lớn hơn cho PC */
+  }
+}
+.modal-custom {
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-header {
+  background-color: #f8f9fa; /* Màu nền sáng cho header */
+  color: #343a40; /* Màu chữ tối cho dễ đọc */
+  border-bottom: 1px solid #ddd; /* Thêm đường viền dưới */
+  font-size: 1.25rem;
+  padding: 15px;
+}
+
+.modal-body {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ol li i {
+  color: #17a2b8; /* Màu icon text-info */
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+}

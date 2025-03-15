@@ -1,0 +1,122 @@
+.sidebar-container {
+  border-radius: 8px; // Bo góc cho sidebar
+  overflow: hidden; // Ẩn các phần tràn ra ngoài
+  background-color: #f8f9fa; // Màu nền cho sidebar
+  padding: 10px; // Khoảng cách bên trong
+
+  // Kiểu dáng cho màn hình tablet
+  @media (max-width: 768px) {
+    padding: 5px; // Giảm khoảng cách bên trong cho tablet
+  }
+
+  // Kiểu dáng cho màn hình di động
+  @media (max-width: 576px) {
+    padding: 2px; // Giảm thêm khoảng cách bên trong cho di động
+  }
+}
+
+.navbar-header {
+  background-color: #f8f9fa; // Màu nền cho header
+  padding: 0.5rem; // Padding cho header
+  display: flex; // Sử dụng Flexbox
+  justify-content: space-between; // Căn giữa khoảng cách giữa các phần tử
+  align-items: center; // Căn giữa theo chiều dọc
+}
+
+.navbar-custom {
+  border-radius: 10px; // Bo góc cho navbar
+
+  // Kiểu dáng cho màn hình tablet
+  @media (max-width: 768px) {
+    border-radius: 5px; // Bo góc nhỏ hơn cho tablet
+  }
+
+  // Kiểu dáng cho màn hình di động
+  @media (max-width: 576px) {
+    border-radius: 2px; // Bo góc nhỏ nhất cho di động
+  }
+}
+
+.active-pro {
+  color: rgba(0, 0, 0, 0.5); // Màu chữ cho nav mặc định
+  transition: color 0.3s ease; // Hiệu ứng chuyển màu mượt mà
+}
+
+.active-pro.active {
+  color: #000; // Màu chữ cho nav đang hoạt động
+}
+
+.navbar-vertical {
+  .active {
+    background-color: #e9ecef; // Màu nền cho nav đang hoạt động
+  }
+}
+
+.active {
+  background-color: #007bff; // Màu nền cho nav đang hoạt động
+  color: white; // Màu chữ
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black; // Màu chữ cho các mục nav bình thường
+}
+
+// Kiểu dáng cho navbar
+.navbar-custom {
+  background-color: #f8f9fa; // Thay đổi màu nền nếu cần
+  padding: 1rem; // Điều chỉnh padding nếu cần
+
+  // Kiểu dáng cho màn hình tablet
+  @media (max-width: 768px) {
+    padding: 0.5rem; // Padding ít hơn cho tablet
+  }
+
+  // Kiểu dáng cho màn hình di động
+  @media (max-width: 576px) {
+    padding: 0.25rem; // Padding còn ít hơn cho di động
+  }
+}
+
+// Kiểu dáng cho logo
+.navbar-custom img {
+  width: 100px; // Kích thước mặc định cho màn hình lớn
+  height: auto; // Tự động điều chỉnh chiều cao
+
+  // Kiểu dáng cho màn hình nhỏ
+  @media (max-width: 576px) {
+    width: 40px; // Kích thước nhỏ hơn cho màn hình nhỏ
+    margin-left: 25px; // Khoảng cách lề trái cho logo
+  }
+}
+
+// Kiểu dáng cho nút 3 gạch
+.btn-link {
+  display: flex; // Căn chỉnh logo và nút
+  align-items: center; // Căn giữa theo chiều dọc
+  color: black; // Màu sắc cho nút 3 gạch
+  margin-left: 16px; // Khoảng cách lề trái cho nút 3 gạch
+  text-decoration: none; // Xóa gạch dưới
+}
+
+.btn-link i {
+  color: black; // Đảm bảo biểu tượng bên trong nút cũng có màu đen
+}
+
+// Căn chỉnh logo bên cạnh nút 3 gạch
+.navbar-custom {
+  display: flex; // Sử dụng Flexbox
+  align-items: center; // Căn giữa theo chiều dọc
+  justify-content: flex-start; // Giữ cho logo và nút 3 gạch nằm bên trái
+}
+
+// Ẩn đường gạch ngang khi màn hình nhỏ hơn 768px
+hr {
+  display: block; // Hiển thị mặc định
+  margin: 1rem 0; // Khoảng cách trên và dưới đường gạch ngang
+}
+
+@media (max-width: 768px) {
+  hr {
+    display: none; // Ẩn khi màn hình nhỏ hơn 768px
+  }
+}

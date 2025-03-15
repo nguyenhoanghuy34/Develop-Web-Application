@@ -1,0 +1,91 @@
+.navbar {
+  background-color: #ffffff !important; /* Nền trắng */
+  color: rgb(2, 2, 2) !important; /* Chữ đen */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng phía dưới */
+  border-radius: 0; /* Xóa bo góc */
+}
+
+.navbar-toggler {
+  border: none;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-toggler-icon {
+  background-color: rgb(184, 18, 18) !important;
+}
+
+.nav-link {
+  color: black !important; /* Chữ đen */
+  margin-right: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover,
+  &.active {
+    color: #17a2b8 !important; /* Màu text-info khi hover */
+  }
+}
+
+.employee-name {
+  color: black;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+  animation: bounce 1s infinite; /* Thêm animation cho logo */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* Nhảy lên */
+  }
+  60% {
+    transform: translateY(-5px); /* Nhảy xuống */
+  }
+}
+
+.navbar .nav-item {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Mobile: dưới 740px */
+@media (max-width: 739px) {
+  .employee-name {
+    display: none; /* Ẩn tên nhân viên */
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Tablet: từ 740px đến dưới 1024px */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .employee-name {
+    display: none; /* Ẩn tên nhân viên */
+  }
+}
+
+/* PC: từ 1024px trở lên */
+@media (min-width: 1024px) {
+  .employee-name {
+    display: inline; /* Hiển thị tên nhân viên */
+  }
+}
